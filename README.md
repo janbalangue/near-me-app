@@ -1,3 +1,7 @@
+# Near Me App
+
+A React application that finds points of interest nearby.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

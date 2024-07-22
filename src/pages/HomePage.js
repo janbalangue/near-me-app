@@ -8,7 +8,6 @@ const HomePage = () => {
         Try searching for local restaurants, gas stations, grocery stores, gyms,
         or hangouts. We've got you covered.
       </p>
-
       <Form className="mt-5">
         <FormGroup className="mx-5">
           <Col className="mx-5">
@@ -22,11 +21,11 @@ const HomePage = () => {
         </FormGroup>
         <FormGroup>
           <Row className="d-flex align-items-center justify-content-center">
-            {/* <Col xs="auto">
-              <Button className="px-5" color="secondary" size="lg" onClick={() => clearSearch()}>
+            <Col xs="auto">
+              <Button className="px-5" color="secondary" size="lg">
                 Clear
               </Button>
-            </Col> */}
+            </Col>
             <Col xs="auto">
               <Button className="px-5" color="primary" size="lg">
                 Submit
@@ -38,6 +37,5 @@ const HomePage = () => {
     </div>
   );
 };
-
 
 export default HomePage;

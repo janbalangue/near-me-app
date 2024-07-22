@@ -9,6 +9,8 @@ import {
   Button,
   Form,
   Input,
+  Label,
+  FormGroup,
 } from "reactstrap";
 import { useState } from "react";
 import { Link } from "react-router-dom";
@@ -21,13 +23,19 @@ const SearchPage = () => {
   }
   return (
     <Container fluid>
-      <Form className="mx-5 mt-3 border"> 
-        <Input
-          id="filter"
-          name="filter"
-          placeholder="Enter a search term to filter this list."
-          type="textarea"
-        />
+      <Form className="mx-5 mt-3">
+        <FormGroup inline>
+          <Label for="filter"><h5>Filter</h5></Label>
+          <Col>
+            <Input
+              id="filter"
+              name="filter"
+              placeholder="Enter a search term to filter this list"
+              type="textarea"
+              className="border"
+            />
+          </Col>
+        </FormGroup>
       </Form>
       <Row className="m-4">
         {response.places.map((site, index) => {

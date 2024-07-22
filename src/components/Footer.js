@@ -3,17 +3,17 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="site-footer mt-5">
-      <Container className="mt-5">
-        <Row className="mt-5">
-          <Col className="mt-5">
-            <h5>Links</h5>
-            <ul className="list-unstyled">
-              <li>
-                <Link to="/">Home</Link>
+    <footer className="site-footer">
+      <Container fluid className="">
+        <Row>
+          <Col id="footer-links">
+            <h5 style={{display: "inline"}} className="mr-5">Links:</h5>
+            <ul className="list-unstyled" style={{display: "inline"}}>
+              <li className="m-3" style={{display: "inline"}}>
+                <Link to="/" style={{textDecoration: "none"}}>Home</Link>
               </li>
-              <li>
-                <Link to="/about">About</Link>
+              <li style={{display: "inline"}}>
+                <Link to="/about" style={{textDecoration: "none"}}>About</Link>
               </li>
             </ul>
           </Col>

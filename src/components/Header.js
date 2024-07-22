@@ -14,8 +14,8 @@ const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
     <Navbar dark color="primary" sticky="top" expand="md">
-      <NavbarBrand className="ms-4">
-        <h3><Logo /> Near Me App</h3>
+      <NavbarBrand className="ms-4 mt-1">
+        <Logo /> <strong>Near Me App</strong>
       </NavbarBrand>
       <NavbarToggler onClick={() => setMenuOpen(!menuOpen)} />
       <Collapse isOpen={menuOpen} navbar>

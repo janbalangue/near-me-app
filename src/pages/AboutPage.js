@@ -1,6 +1,8 @@
+import { Container } from "reactstrap";
+
 const AboutPage = () => {
   return (
-    <div className="mt-5">
+    <Container className="mt-5" fluid>
       <h1 className="mt-5 text-center">About This App</h1>
       <div className="mt-5">
         <p className="mx-5 text-center">
@@ -11,7 +13,7 @@ const AboutPage = () => {
         Try it without typing a location, and it will find places near you.
         </p>
       </div>
-    </div>
+    </Container>
   );
 };
 

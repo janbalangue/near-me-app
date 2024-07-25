@@ -42,7 +42,7 @@ const SearchPage = () => {
               <CardTitle className="m-3">
                 <Button
                   className="pull-right"
-                  color="danger"
+                  color="primary"
                   onClick={() => removeCard(index)}
                 >
                   <i class="fa fa-window-close fa-lg" />

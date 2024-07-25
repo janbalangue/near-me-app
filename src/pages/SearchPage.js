@@ -4,12 +4,10 @@ import {
   CardTitle,
   CardBody,
   CardText,
-  Col,
   Row,
   Button,
   Form,
   Input,
-  Label,
   FormGroup,
 } from "reactstrap";
 import { useState } from "react";
@@ -37,7 +35,7 @@ const SearchPage = () => {
       </Form>
       {response.places.map((site, index) => {
         return (
-          <Row key={index} style={{ minWidth: "100%", margin: ".2rem" }}>
+          <Row key={index} style={{ margin: "3rem" }}>
             <Card className="site-card">
               <CardTitle className="m-3">
                 <Button

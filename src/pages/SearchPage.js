@@ -30,7 +30,9 @@ const SearchPage = () => {
             type="textarea"
             className="border"
           />
-          <Button color="primary" className="mt-2 px-5">Filter</Button>
+          <Button color="primary" className="mt-2 px-5">
+            Filter
+          </Button>
         </FormGroup>
       </Form>
       {response.places.map((site, index) => {
@@ -43,7 +45,7 @@ const SearchPage = () => {
                   color="danger"
                   onClick={() => removeCard(index)}
                 >
-                  X
+                  <i class="fa fa-window-close fa-lg" />
                 </Button>
                 <h4>{site.displayName.text}</h4>
               </CardTitle>

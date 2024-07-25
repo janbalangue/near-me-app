@@ -33,7 +33,7 @@ const HomePage = () => {
               id="search"
               name="search"
               placeholder="Where do you want to go?"
-              type="textarea"
+              type="text"
             />
           </Col>
         </FormGroup>

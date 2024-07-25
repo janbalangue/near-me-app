@@ -23,50 +23,46 @@ const SearchPage = () => {
   }
   return (
     <Container fluid>
-      <Form className="mx-5 mt-3">
+      <Form className="mt-3 px-5">
         <FormGroup inline>
-          <Label for="filter"><h5>Filter</h5></Label>
-          <Col>
-            <Input
-              id="filter"
-              name="filter"
-              placeholder="Enter a search term to filter this list"
-              type="textarea"
-              className="border"
-            />
-          </Col>
+          <Input
+            id="filter"
+            name="filter"
+            placeholder="Enter a search term to filter this list"
+            type="textarea"
+            className="border"
+          />
+          <Button color="primary" className="mt-2 px-5">Filter</Button>
         </FormGroup>
       </Form>
-      <Row className="m-4">
-        {response.places.map((site, index) => {
-          return (
-            <Col key={index} style={{ minWidth: "100%", margin: ".2rem" }}>
-              <Card className="site-card">
-                <CardTitle className="m-3">
-                  <Button
-                    className="pull-right"
-                    color="danger"
-                    onClick={() => removeCard(index)}
-                  >
-                    X
-                  </Button>
-                  <h4>{site.displayName.text}</h4>
-                </CardTitle>
-                <CardBody>
-                  <CardText>{site.formattedAddress}</CardText>
-                  <CardText>
-                    {site.priceLevel
-                      ? site.priceLevel.split("_").join(" ").toLowerCase()
-                      : ""}
-                    <hr />
-                    <Link to={site.websiteUri}>{site.websiteUri}</Link>
-                  </CardText>
-                </CardBody>
-              </Card>
-            </Col>
-          );
-        })}
-      </Row>
+      {response.places.map((site, index) => {
+        return (
+          <Row key={index} style={{ minWidth: "100%", margin: ".2rem" }}>
+            <Card className="site-card">
+              <CardTitle className="m-3">
+                <Button
+                  className="pull-right"
+                  color="danger"
+                  onClick={() => removeCard(index)}
+                >
+                  X
+                </Button>
+                <h4>{site.displayName.text}</h4>
+              </CardTitle>
+              <CardBody>
+                <CardText>{site.formattedAddress}</CardText>
+                <CardText>
+                  {site.priceLevel
+                    ? site.priceLevel.split("_").join(" ").toLowerCase()
+                    : ""}
+                  <hr />
+                  <Link to={site.websiteUri}>{site.websiteUri}</Link>
+                </CardText>
+              </CardBody>
+            </Card>
+          </Row>
+        );
+      })}
     </Container>
   );
 };

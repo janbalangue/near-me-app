@@ -17,7 +17,7 @@ const HomePage = () => {
   ];
   return (
     <Container className="mt-5" fluid>
-      <h1 className={h1Style}>Find your favorite place to be.</h1>
+      <h1 className={h1Style}>Find your next favorite place.</h1>
       <p className={paragraphStyle}>
         Near Me App brings your neighborhood to you. Search for your next
         favorite pizzeria, coffee spot, nightclub, or anyplace else.

@@ -21,7 +21,6 @@ const SearchRow = ({site, index}) => {
               {site.priceLevel
                 ? site.priceLevel.split("_").join(" ").toLowerCase()
                 : ""}
-              <hr />
               <Link to={site.websiteUri}>{site.websiteUri}</Link>
             </CardText>
           </CardBody>

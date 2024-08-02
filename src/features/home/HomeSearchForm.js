@@ -2,13 +2,8 @@ import { Row, Col, Form, FormGroup, Input, Button, Label } from "reactstrap";
 
 const HomeSearchForm = () => {
   const rowStyle = "d-flex align-items-center justify-content-center";
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const form = e.currentTarget;
-    console.log(form.search.value);
-  } 
   return (
-    <Form className="mt-5" action="/search" onSubmit={handleSubmit}>
+    <Form className="mt-5" action="/search">
       <FormGroup className="mx-5">
         <Col className="mx-5">
           <Label for="search">

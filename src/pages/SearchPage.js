@@ -3,8 +3,12 @@ import { response } from "../data/response";
 import SearchFilterForm from "../features/search/SearchFilterForm";
 import SearchRow from "../features/search/SearchRow";
 import { v4 as uuid } from "uuid";
+import { useEffect } from "react";
 
 const SearchPage = () => {
+  useEffect(() => {
+    document.title = "Near Me App | Search";
+  });
   return (
     <Container fluid>
       <SearchFilterForm />

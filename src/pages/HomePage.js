@@ -1,8 +1,12 @@
 import { Container } from "reactstrap";
 import HomeSearchForm from "../features/home/HomeSearchForm";
+import { useEffect } from "react";
 
 const HomePage = () => {
   const [paragraphStyle, h1Style] = ["text-center mt-3", "text-center mt-5"];
+  useEffect(() => {
+    document.title = "Near Me App | Home";
+  });
   return (
     <Container className="mt-5" fluid>
       <h1 className={h1Style}>Find your next favorite place.</h1>

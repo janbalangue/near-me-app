@@ -1,31 +1,19 @@
-import { Button, Form, Input, FormGroup } from "reactstrap";
+import { Input } from "reactstrap";
 
 const SearchFilterForm = () => {
-  const handleSubmit = (e) => {
+  const handleChange = (e) => {
     e.preventDefault();
-    const form = e.currentTarget;
-    console.log(form.filter.value);
+    console.log(e.target.value);
   };
   return (
-    <Form className="mt-3 px-5" onSubmit={handleSubmit}>
-      <FormGroup inline>
         <Input
           id="filter"
           name="filter"
-          placeholder="Enter a search term to filter this list"
+          placeholder="Type here to filter the places below"
           type="text"
           className="border"
+          onChange={handleChange}
         />
-        <Button
-          color="primary"
-          className="mt-2 px-5"
-          name="submit"
-          type="submit"
-        >
-          Filter
-        </Button>
-      </FormGroup>
-    </Form>
   );
 };
 

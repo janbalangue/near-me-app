@@ -30,4 +30,18 @@ h3,
   background-color: #dfffff;
 }
 
+.searchBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+#filter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
 

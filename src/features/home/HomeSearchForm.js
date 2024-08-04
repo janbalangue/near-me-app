@@ -1,8 +1,7 @@
-import { Row, Col, FormGroup, Button, Label } from "reactstrap";
+import { Col, FormGroup, Button, Label } from "reactstrap";
 import { Formik, Form, Field } from "formik";
 
 const HomeSearchForm = () => {
-  const rowStyle = "d-flex align-items-center justify-content-center";
   const handleSubmit = (values, { resetForm }) => {
     console.log("form values:", values);
     console.log("in JSON format:", JSON.stringify(values));
@@ -25,26 +24,17 @@ const HomeSearchForm = () => {
             />
           </Col>
         </FormGroup>
-        <FormGroup>
-          <Row className={rowStyle}>
-            <Col xs="auto">
-              <Button className="px-5" color="secondary" size="lg">
-                Clear
-              </Button>
-            </Col>
-            <Col xs="auto">
-              <Button
-                type="submit"
-                name="submit"
-                className="px-5"
-                color="primary"
-                size="lg"
-              >
-                Submit
-              </Button>
-            </Col>
-          </Row>
-        </FormGroup>
+        <div className="searchBtn">
+          {" "}
+          <Button
+            type="submit"
+            name="submit"
+            className="searchBtn px-5"
+            color="primary"
+          >
+            Submit
+          </Button>
+        </div>
       </Form>
     </Formik>
   );

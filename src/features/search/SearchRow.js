@@ -13,7 +13,7 @@ const SearchRow = ({ site, index }) => {
           <CardText>
             {site.priceLevel
               ? site.priceLevel.split("_").join(" ").toLowerCase()
-              : ""}
+              : "price level unavailable"}
             <br />
             <br />
             <Link to={site.websiteUri}>

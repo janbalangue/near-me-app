@@ -1,4 +1,4 @@
-import { ReactComponent as LogoSVG } from "../assets/img/mapPin.svg";
+import { ReactComponent as LogoSVG } from "../app/assets/img/mapPin.svg";
 
 const Logo = () => {
   return <LogoSVG />;

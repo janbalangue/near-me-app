@@ -10,7 +10,7 @@ const SearchFilterForm = () => {
           id="filter"
           name="filter"
           placeholder="Type here to filter the places below"
-          type="text"
+          type="search"
           className="border"
           onChange={handleChange}
         />

@@ -20,7 +20,7 @@ const HomeSearchForm = () => {
               id="search"
               name="search"
               placeholder="Where do you want to go?"
-              type="text"
+              type="search"
             />
           </Col>
         </FormGroup>

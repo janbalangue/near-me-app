@@ -1,21 +1,21 @@
-import { Col, FormGroup, Button, Label } from "reactstrap";
-import { Formik, Form, Field } from "formik";
+import { Col, FormGroup, Button, Label, Input } from "reactstrap";
+import fetchPlaces from "../../data/fetchPlaces";
 
 const HomeSearchForm = () => {
-  const handleSubmit = (values, { resetForm }) => {
-    console.log("form values:", values);
-    console.log("in JSON format:", JSON.stringify(values));
-    resetForm();
-  };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    console.log("value:", e.target.search.value);
+    console.log("in JSON format:", JSON.stringify(e.target.search.value));
+    await fetchPlaces(e.target.search.value);
+  }
   return (
-    <Formik initialValues={{ search: "" }} onSubmit={handleSubmit}>
-      <Form className="mt-5">
+      <form className="mt-5" onSubmit={handleSubmit}>
         <FormGroup className="mx-5">
           <Col className="mx-5">
             <Label htmlFor="search">
               <h5>Search</h5>
             </Label>
-            <Field
+            <Input
               className="form-control"
               id="search"
               name="search"
@@ -35,8 +35,7 @@ const HomeSearchForm = () => {
             Submit
           </Button>
         </div>
-      </Form>
-    </Formik>
+      </form>
   );
 };
 

@@ -8,7 +8,7 @@ import { useEffect } from "react";
 const SearchPage = () => {
   useEffect(() => {
     document.title = "Near Me App | Search";
-  });
+  }, []);
   return (
     <Container fluid>
       <SearchFilterForm />

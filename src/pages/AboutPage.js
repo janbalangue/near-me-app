@@ -4,7 +4,7 @@ import { useEffect } from "react";
 const AboutPage = () => {
   useEffect(() => {
     document.title = "Near Me App | About";
-  });
+  }, []);
   return (
     <Container className="mt-5" fluid>
       <h1 className="mt-5 text-center">About This App</h1>

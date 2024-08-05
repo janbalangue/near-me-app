@@ -11,10 +11,10 @@ const AboutPage = () => {
       <div className="mt-5">
         <p className="mx-5 text-center">
         This is a React portfolio project created at NuCamp. It provides
-        points of interest from the Google Maps Places API.
+        points of interest from the Google Maps JavaScript API.
         </p>
         <p className="mx-5 text-center">
-        Try it without typing a location, and it will find places near you.
+        Under the hood, it uses geolocation based on your router's IP address.
         </p>
       </div>
     </Container>

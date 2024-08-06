@@ -4,11 +4,13 @@ import { Link } from "react-router-dom";
 const SearchRow = ({ place, index }) => {
   return (
     <Card key={index} className="searchRow">
-      <CardTitle>
-        <h4 className="displayName">{place.displayName.text}</h4>
+      <CardTitle className="m-3">
+        <strong>{place.displayName.text}</strong>
       </CardTitle>
       <CardBody>
-        <CardText>{place.formattedAddress}<br />
+        <CardText>
+          {place.formattedAddress}
+          <br />
           {place.priceLevel
             ? place.priceLevel.split("_").join(" ").toLowerCase()
             : "price level unavailable"}

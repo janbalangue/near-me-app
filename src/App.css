@@ -26,6 +26,13 @@ h3,
   background-color: #dfffff;
 }
 
+.searchCol {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60rem;
+}
+
 .searchBtn {
   display: flex;
   align-items: center;
@@ -38,12 +45,8 @@ h3,
   margin-left: auto;
   margin-right: auto;
   margin-top: 1rem;
+  margin-bottom: 4rem;
   width: 70rem;
-}
-
-.displayName {
-  margin-top: 1rem;
-  margin-left: 1rem;
 }
 
 #filter {

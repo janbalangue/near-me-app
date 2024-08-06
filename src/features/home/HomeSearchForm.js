@@ -9,9 +9,9 @@ const HomeSearchForm = () => {
     navigate(`/search`);
   };
   return (
-    <form className="mt-5" onSubmit={handleSubmit}>
+    <form className="mt-3" onSubmit={handleSubmit}>
       <FormGroup className="mx-5">
-        <Col className="mx-5">
+        <Col className="searchCol">
           <Label htmlFor="search">
             <h5>Search</h5>
           </Label>

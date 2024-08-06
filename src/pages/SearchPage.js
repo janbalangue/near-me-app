@@ -45,7 +45,6 @@ const SearchPage = () => {
       {searchRows.map((place) => {
         return <SearchRow key={uuid()} place={place} />;
       })}
-      <h3 className="mt-5 text-center">No results found</h3>
     </Container>
   );
 };

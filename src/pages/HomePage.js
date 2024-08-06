@@ -3,7 +3,6 @@ import HomeSearchForm from "../features/home/HomeSearchForm";
 import { useEffect } from "react";
 
 const HomePage = () => {
-  console.log(process.env.IPIFY_API_URL);
   const [paragraphStyle, h1Style] = ["text-center mt-3", "text-center mt-5"];
   useEffect(() => {
     document.title = "Near Me App | Home";

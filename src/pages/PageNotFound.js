@@ -13,6 +13,7 @@ const PageNotFound = () => {
     config: { duration: 500 },
   });
   useEffect(() => {
+    document.title = "Near Me App | Page Not Found";
     setToggle(true);
   }, []);
   return (

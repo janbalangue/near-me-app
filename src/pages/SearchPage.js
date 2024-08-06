@@ -39,7 +39,6 @@ const SearchPage = () => {
         name="filter"
         placeholder="Type here to filter the places below"
         type="search"
-        className="border"
         onChange={handleChange}
       />
       {searchRows.map((place) => {

@@ -14,10 +14,6 @@ h3,
     max-width: 3rem;
 }
 
-.place-card {
-  padding: 0;
-}
-
 .site-footer {
   position: fixed;
   margin-top: 2rem;
@@ -37,11 +33,26 @@ h3,
   height: 100%;
 }
 
-#filter {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.searchRow {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 1rem;
+  width: 70rem;
+}
+
+.displayName {
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+
+#filter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  width: 70rem;
+  border: 2px solid teal;
 }
 
 #kermits404 {

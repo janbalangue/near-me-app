@@ -1,9 +1,9 @@
 import { Container } from "reactstrap";
-import { response } from "../data/response";
 import SearchFilterForm from "../features/search/SearchFilterForm";
 import SearchRow from "../features/search/SearchRow";
 import { v4 as uuid } from "uuid";
 import { useEffect } from "react";
+import { response } from "../data/response";
 
 const SearchPage = () => {
   useEffect(() => {
@@ -17,6 +17,7 @@ const SearchPage = () => {
       })}
     </Container>
   );
+
 };
 
 export default SearchPage;

@@ -3,10 +3,10 @@ import { useNavigate } from "react-router-dom";
 
 const HomeSearchForm = () => {
   const navigate = useNavigate();
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     console.log("value:", e.target.search.value);
-    navigate(`/search`);
+    navigate(`/search/${e.target.search.value}`);
   };
   return (
     <form className="mt-3" onSubmit={handleSubmit}>

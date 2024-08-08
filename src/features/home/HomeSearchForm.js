@@ -5,7 +5,6 @@ const HomeSearchForm = () => {
   const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("value:", e.target.search.value);
     navigate(`/search/${e.target.search.value}`);
   };
   return (

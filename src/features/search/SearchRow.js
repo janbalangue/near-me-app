@@ -1,21 +1,22 @@
 import { Card, CardTitle, CardBody, CardText } from "reactstrap";
 import { Link } from "react-router-dom";
 
-const SearchRow = ({ place, index }) => {
+const SearchRow = ({ place }) => {
+  const { displayName, formattedAddress, priceLevel, websiteUri } = place;
   return (
-    <Card key={index} className="searchRow">
+    <Card className="searchRow">
       <CardTitle className="m-3">
-        <strong>{place.displayName.text}</strong>
+        <strong>{displayName.text}</strong>
       </CardTitle>
       <CardBody>
         <CardText>
-          {place.formattedAddress}
+          {formattedAddress}
           <br />
-          {place.priceLevel
-            ? place.priceLevel.split("_").join(" ").toLowerCase()
+          {priceLevel
+            ? priceLevel.split("_").join(" ").toLowerCase()
             : "price level unavailable"}
         </CardText>
-        <Link to={place.websiteUri}>
+        <Link to={websiteUri}>
           <i className="fa fa-globe" aria-hidden="true"></i>
           Go to website
         </Link>

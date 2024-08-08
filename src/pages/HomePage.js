@@ -12,10 +12,12 @@ const HomePage = () => {
       <h1 className={h1Style}>Find your next favorite place.</h1>
       <p className={paragraphStyle}>
         Near Me App brings your neighborhood to you. Search for your next
-        favorite pizzeria, coffee spot, nightclub, movie theater, or anyplace else.
+        favorite pizzeria, coffee spot, nightclub, movie theater, or anyplace
+        else.
       </p>
       <p className={paragraphStyle}>
-        We've got you covered.
+        You can even search in another city, anywhere in the world. We've got
+        you covered.
       </p>
       <HomeSearchForm />
     </Container>

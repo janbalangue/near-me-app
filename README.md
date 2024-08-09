@@ -1,6 +1,6 @@
 # Near Me App
 
-A React application that finds points of interest nearby.
+A React application that finds points of interest nearby or in any city around the world. It talks to places-be, a Spring Boot REST API that calls the Google Maps Places API.
 
 # Getting Started with Create React App
 

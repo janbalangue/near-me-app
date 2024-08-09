@@ -49,6 +49,10 @@ h3,
   width: 70rem;
 }
 
+.searchRow:hover {
+  border: 2px solid mediumslateblue;
+}
+
 #filter {
   display: block;
   margin-left: auto;

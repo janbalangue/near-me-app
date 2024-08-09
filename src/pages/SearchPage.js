@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { v4 as uuid } from "uuid";
 import { useParams } from "react-router-dom";
 import { callPlacesBackend } from "../data/callPlacesBackend";
+import NoResults from "../features/search/NoResults";
 
 const SearchPage = () => {
   const { query } = useParams();
@@ -54,7 +55,7 @@ const SearchPage = () => {
       {placeList[0] ? (
         placeList.map((place) => <SearchRow place={place} key={uuid()} />)
       ) : (
-        <h2 className="mt-5 text-center">No results found</h2>
+        <NoResults />
       )}
     </Container>
   );

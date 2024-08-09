@@ -7,6 +7,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "font-awesome/css/font-awesome.css";
 import "typeface-open-sans";
 import "@fontsource/roboto";
+import "@fontsource/noto-sans";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

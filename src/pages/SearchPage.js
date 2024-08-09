@@ -5,10 +5,12 @@ import { v4 as uuid } from "uuid";
 import { useParams } from "react-router-dom";
 import { callPlacesBackend } from "../data/callPlacesBackend";
 import NoResults from "../features/search/NoResults";
+import { useSelector, useDispatch } from "react-redux";
+import { fetchPlaceList } from "../features/search/searchSlice";
 
 const SearchPage = () => {
   const { query } = useParams();
-  const [placeList, setPlaceList] = useState([]);
+  const dispatch = useDispatch();
   const [filterText, setFilterText] = useState("");
   useEffect(() => {
     document.title = `Near Me App | Search: ${query}`;
@@ -17,7 +19,7 @@ const SearchPage = () => {
     const fetchPlaces = async () => {
       try {
         const response = await callPlacesBackend(query);
-        setPlaceList(
+        dispatch(
           response.filter((place) => {
             const [name, address, priceLevel] = [
               place.displayName.text.toLowerCase(),

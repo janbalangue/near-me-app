@@ -51,6 +51,7 @@ const SearchPage = () => {
         placeholder="Type here to filter the places below"
         type="search"
         onChange={handleChange}
+        autoFocus
       />
       {placeList[0] ? (
         placeList.map((place) => <SearchRow place={place} key={uuid()} />)

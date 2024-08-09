@@ -20,6 +20,7 @@ const HomeSearchForm = () => {
             name="search"
             placeholder="Where do you want to go?"
             type="search"
+            autoFocus
           />
         </Col>
       </FormGroup>

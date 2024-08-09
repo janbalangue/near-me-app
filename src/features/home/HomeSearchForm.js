@@ -6,6 +6,7 @@ import * as Yup from "yup";
 const SearchSchema = Yup.object().shape({
   search: Yup.string()
     .min(2, "Please enter at least 2 characters")
+    .matches(/^[a-z ]+$/i, 'Only alphabetical characters are allowed')
     .required("Required"),
 });
 

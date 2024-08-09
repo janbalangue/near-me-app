@@ -16,10 +16,12 @@ const SearchRow = ({ place }) => {
             ? priceLevel.split("_").join(" ").toLowerCase()
             : "price level unavailable"}
         </CardText>
-        <Link to={websiteUri}>
-          <i className="fa fa-globe" aria-hidden="true"></i>
-          Go to website
-        </Link>
+        {websiteUri ? (
+          <Link to={websiteUri}>
+            <i className="fa fa-globe" aria-hidden="true"></i>
+            Go to website
+          </Link>
+        ) : null}
       </CardBody>
     </Card>
   );

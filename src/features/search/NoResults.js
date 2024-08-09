@@ -5,7 +5,7 @@ const NoResults = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(true);
-    }, 1000);
+    }, 1200);
     return () => clearTimeout(timer);
   });
   return (

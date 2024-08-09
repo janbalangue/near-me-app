@@ -49,7 +49,7 @@ h3,
   width: 70rem;
 }
 
-.searchRow:hover {
+.searchRow:hover, #search:hover {
   border: 1px solid mediumslateblue;
 }
 

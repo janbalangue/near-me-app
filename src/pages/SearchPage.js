@@ -10,8 +10,8 @@ const SearchPage = () => {
   const [placeList, setPlaceList] = useState([]);
   const [filterText, setFilterText] = useState("");
   useEffect(() => {
-    document.title = "Near Me App | Search";
-  }, []);
+    document.title = `Near Me App | Search: ${query}`;
+  }, [query]);
   useEffect(() => {
     const fetchPlaces = async () => {
       try {

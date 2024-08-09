@@ -51,9 +51,11 @@ const SearchPage = () => {
         type="search"
         onChange={handleChange}
       />
-      {placeList.map((place) => (
-        <SearchRow place={place} key={uuid()} />
-      ))}
+      {placeList[0] ? (
+        placeList.map((place) => <SearchRow place={place} key={uuid()} />)
+      ) : (
+        <h2 className="mt-5 text-center">No results found</h2>
+      )}
     </Container>
   );
 };

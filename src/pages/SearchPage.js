@@ -5,9 +5,16 @@ import { v4 as uuid } from "uuid";
 import { useParams } from "react-router-dom";
 import { callPlacesBackend } from "../data/callPlacesBackend";
 import NoResults from "../features/search/NoResults";
+import { useSpring, animated } from "react-spring";
 
 const SearchPage = () => {
   const { query } = useParams();
+  const [toggle, setToggle] = useState(false);
+  const animatedStyle = useSpring({
+    opacity: toggle ? 1 : 0,
+    transform: toggle ? "scale(1, 1)" : "scale(1, 0)",
+    config: { duration: 500 },
+  });
   const [placeList, setPlaceList] = useState([]);
   const [filterText, setFilterText] = useState("");
   useEffect(() => {
@@ -33,6 +40,7 @@ const SearchPage = () => {
             );
           })
         );
+        setToggle(true);
       } catch (error) {
         console.error(error.message);
       }
@@ -54,8 +62,14 @@ const SearchPage = () => {
         autoFocus
       />
       {placeList[0] ? (
-        placeList.map((place) => <SearchRow place={place} key={uuid()} />)
-      ) : (
+        placeList.map((place) => { 
+          return (
+            <animated.div style={animatedStyle}>
+              <SearchRow place={place} key={uuid()} />
+            </animated.div>
+          );
+        }
+      )) : (
         <NoResults />
       )}
     </Container>

@@ -9,12 +9,10 @@ const HomeSearchForm = () => {
   };
   return (
     <Container id="searchContainer" fluid>
-      <form className="mt-3" onSubmit={handleSubmit}>
-        <FormGroup className="mx-5">
+      <form onSubmit={handleSubmit}>
+        <FormGroup>
           <Col>
-            <Label htmlFor="search">
-              <h5>Search</h5>
-            </Label>
+            <Label htmlFor="search">Search</Label>
             <Input
               className="form-control"
               id="search"

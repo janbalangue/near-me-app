@@ -11,7 +11,7 @@ const AboutPage = () => {
       <div id="aboutText" className="mt-5">
         <p className="text-center">
         This is a React portfolio project created for NuCamp. It provides points of interest
-         from a Java/Spring Boot REST API that calls the Google Maps Places API.
+         from a Java/Spring Boot REST API that calls the Places API in Google Maps.
         </p>
         <p className="text-center">
         Under the hood, the Places API uses geolocation.

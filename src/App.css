@@ -46,12 +46,18 @@ h3,
   border: 1px solid mediumslateblue;
 }
 
-#textIntro, #aboutText, #searchContainer {
+#textIntro, #aboutText {
   display: block;
   margin-left: 2rem;
   margin-right: 2rem;
   margin-top: 1rem;
   margin-bottom: 4rem;
+  width: auto;
+}
+
+#searchContainer {
+  margin-left: 6rem;
+  margin-right: 6rem;
   width: auto;
 }
 

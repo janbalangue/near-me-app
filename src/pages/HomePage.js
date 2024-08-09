@@ -16,8 +16,8 @@ const HomePage = () => {
         else.
       </p>
       <p className={paragraphStyle}>
-        Try looking for a personal trainer, dental cleaning, or an oil change
-        here too.
+        Try looking for a personal trainer, family doctor, or an oil change here
+        too.
       </p>
       <p className={paragraphStyle}>
         You can even search in another city, anywhere in the world. We've got

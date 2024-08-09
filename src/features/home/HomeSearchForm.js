@@ -19,7 +19,7 @@ const HomeSearchForm = () => {
               className="form-control"
               id="search"
               name="search"
-              placeholder="Where do you want to go?"
+              placeholder="Where to?"
               type="search"
               autoFocus
             />

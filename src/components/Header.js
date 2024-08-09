@@ -15,7 +15,7 @@ const Header = () => {
   return (
     <Navbar color="primary" dark sticky="top" expand="md">
       <NavbarBrand className="ms-4 mt-1" href="/">
-        <Logo /> <strong>Near Me App</strong>
+        <Logo /> 
       </NavbarBrand>
       <NavbarToggler onClick={() => setMenuOpen(!menuOpen)} />
       <Collapse isOpen={menuOpen} navbar>

@@ -21,7 +21,6 @@ const HomeSearchForm = () => {
         initialValues={{ search: "" }}
         validationSchema={SearchSchema}
         onSubmit={( values, {setSubmitting}) => {
-          console.log("values", values);
           handleSubmit(values);
           setSubmitting(false);
         }}

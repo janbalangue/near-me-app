@@ -1,6 +1,6 @@
 import { Container, Input } from "reactstrap";
 import SearchRow from "../features/search/SearchRow";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { v4 as uuid } from "uuid";
 import { useParams } from "react-router-dom";
 import { callPlacesBackend } from "../data/callPlacesBackend";
@@ -15,7 +15,8 @@ const SearchPage = () => {
     transform: toggle ? "scale(1, 1)" : "scale(1, 0)",
     config: { duration: 500 },
   });
-  const [placeList, setPlaceList] = useState([]);
+  const [places, setPlaces] = useState([]);
+  const storedPlacesRef = useRef(null);
   const [filterText, setFilterText] = useState("");
   useEffect(() => {
     document.title = `Near Me App | Search: ${query}`;
@@ -24,32 +25,34 @@ const SearchPage = () => {
     const fetchPlaces = async () => {
       try {
         const response = await callPlacesBackend(query);
-        setPlaceList(
-          response.filter((place) => {
-            const [name, address, priceLevel] = [
-              place.displayName.text.toLowerCase(),
-              place.formattedAddress.toLowerCase(),
-              place.priceLevel
-                ? place.priceLevel.split("_").join(" ").toLowerCase()
-                : "price level unavailable",
-            ];
-            return (
-              name.includes(filterText.toLowerCase()) ||
-              address.includes(filterText.toLowerCase()) ||
-              priceLevel.includes(filterText.toLowerCase())
-            );
-          })
-        );
+        setPlaces(response);
+        storedPlacesRef.current = response;
         setToggle(true);
       } catch (error) {
         console.error(error.message);
       }
     };
     fetchPlaces();
-  }, [filterText, query]);
+  }, [query]);
   const handleChange = (e) => {
     e.preventDefault();
     setFilterText(e.target.value);
+    setPlaces(
+      storedPlacesRef.current.filter((place) => {
+        const [name, address, priceLevel] = [
+          place.displayName.text.toLowerCase(),
+          place.formattedAddress.toLowerCase(),
+          place.priceLevel
+            ? place.priceLevel.split("_").join(" ").toLowerCase()
+            : "price level unavailable",
+        ];
+        return (
+          name.includes(filterText.toLowerCase()) ||
+          address.includes(filterText.toLowerCase()) ||
+          priceLevel.includes(filterText.toLowerCase())
+        );
+      })
+    );
   };
   return (
     <Container fluid>
@@ -61,10 +64,10 @@ const SearchPage = () => {
         onChange={handleChange}
         autoFocus
       />
-      {placeList[0] ? (
-        placeList.map((place) => { 
+      {places[0] ? (
+        places.map((place) => { 
           return (
-            <animated.div style={animatedStyle}>
+            <animated.div key={uuid()} style={animatedStyle}>
               <SearchRow place={place} key={uuid()} />
             </animated.div>
           );

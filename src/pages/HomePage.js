@@ -16,6 +16,9 @@ const HomePage = () => {
       <HomeSearchForm />
       <div id="textIntro">
         <p className={style}>
+          This release does not call the Places API in Google Maps.
+        </p>
+        <p className={style}>
           Search for any place under the sun in your neighborhood or around the
           world.
         </p>

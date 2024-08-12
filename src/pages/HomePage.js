@@ -9,8 +9,11 @@ const HomePage = () => {
   }, []);
   return (
     <Container className="mt-5" fluid>
-      <div id="textIntro">
+      <div>
         <h1 className={style}>Find your next favorite place.</h1>
+      </div>
+      <HomeSearchForm />
+      <div id="textIntro">
         <br />
         <p className={style}>
           Near Me App brings your neighborhood to you. Search for your next
@@ -26,7 +29,6 @@ const HomePage = () => {
           you covered.
         </p>
       </div>
-      <HomeSearchForm />
     </Container>
   );
 };

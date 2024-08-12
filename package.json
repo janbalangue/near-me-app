@@ -1,8 +1,6 @@
 {
   "name": "near-me-app",
   "version": "0.1.0",
-  "homepage": "https://janbalangue.github.io/near-me-app",
-
   "private": true,
   "dependencies": {
     "@fontsource/noto-sans": "^5.0.22",
@@ -36,8 +34,6 @@
     "**/react-dom": "18.3.1"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

@@ -1,7 +1,7 @@
 {
   "name": "near-me-app",
   "version": "0.1.0",
-  "homepage": "https://janbalangue.github.io/near-me-app",
+  "homepage": "https://janbalangue.github.io/near-me-app/",
   "private": true,
   "dependencies": {
     "@fontsource/noto-sans": "^5.0.22",

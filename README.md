@@ -4,7 +4,7 @@ A React application that finds points of interest nearby or in any city around t
 
 A deployed version that does not call the API can be found here: https://janbalangue.github.io/near-me-app/
 
-In places-be, create a .env file at the root and place the Google Maps API key enabled for the new Places API there. Then switch to the api branch and start places-be before running this app.
+In places-be, create a .env file at the root and place the Google Maps API key enabled for the new Places API there. Then switch to the api branch of near-me-app and start places-be before running this app.
 
 # Getting Started with Create React App
 

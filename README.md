@@ -2,6 +2,8 @@
 
 A React application that finds points of interest nearby or in any city around the world. It talks to places-be, a Spring Boot REST API that calls the Google Maps Places API.
 
+A deployed version that does not call the API can be found here: https://janbalangue.github.io/near-me-app/
+
 Start places-be before running this app.
 
 # Getting Started with Create React App

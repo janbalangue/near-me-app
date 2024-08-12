@@ -15,7 +15,6 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/search/:query" element={<SearchPage />} />
-        <Route path="*" element={<PageNotFound />} />
       </Routes>
       <Footer />
     </div>

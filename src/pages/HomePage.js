@@ -16,17 +16,11 @@ const HomePage = () => {
       <div id="textIntro">
         <br />
         <p className={style}>
-          Near Me App brings your neighborhood to you. Search for your next
-          favorite pizzeria, coffee spot, nightclub, movie theater, or anyplace
-          else.
+          Near Me App brings your neighborhood and the world to you. Search for local
+          pizzerias, personal trainers, grocery stores, or anything else.
         </p>
         <p className={style}>
-          Try looking for a personal trainer, family doctor, or an oil change
-          here too.
-        </p>
-        <p className={style}>
-          You can even search in another city, anywhere in the world. We've got
-          you covered.
+          You can also enter a city and take your search anywhere in the world.
         </p>
       </div>
     </Container>

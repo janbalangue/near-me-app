@@ -78,11 +78,11 @@ h3,
 
 .searchRow {
   display: block;
-  margin-left: 5rem;
-  margin-right: 5rem;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 1rem;
   margin-bottom: 4rem;
-  width: auto;
+  width: calc(50% + 100px);
 }
 
 .searchRow:hover,

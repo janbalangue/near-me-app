@@ -14,12 +14,9 @@ const HomePage = () => {
       </div>
       <HomeSearchForm />
       <div id="textIntro">
-        <br />
         <p className={style}>
-          Search for local pizzerias, personal trainers, grocery stores, or anything else.
-        </p>
-        <p className={style}>
-          You can also enter another city and take your search anywhere.
+          Search for any place under the sun in your neighborhood or around the
+          world.
         </p>
       </div>
     </Container>

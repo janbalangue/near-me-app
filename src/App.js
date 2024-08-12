@@ -12,9 +12,10 @@ function App() {
     <div className="App">
       <Header />
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/search/:query" element={<SearchPage />} />
+        <Route path="/near-me-app/" element={<HomePage />} />
+        <Route path="/near-me-app/about" element={<AboutPage />} />
+        <Route path="/near-me-app/search/:query" element={<SearchPage />} />
+        <Route path="/near-me-app/*" element={<PageNotFound />} />
       </Routes>
       <Footer />
     </div>

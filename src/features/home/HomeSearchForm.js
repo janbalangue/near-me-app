@@ -53,7 +53,7 @@ const HomeSearchForm = () => {
                 color="primary"
                 disabled={isSubmitting}
               >
-                Submit
+                Search
               </button>
             </Container>
           </Form>

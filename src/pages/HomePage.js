@@ -16,8 +16,7 @@ const HomePage = () => {
       <div id="textIntro">
         <br />
         <p className={style}>
-          Near Me App brings your neighborhood and the world to you. Search for local
-          pizzerias, personal trainers, grocery stores, or anything else.
+          Search for local pizzerias, personal trainers, grocery stores, or anything else.
         </p>
         <p className={style}>
           You can also enter another city and take your search anywhere.

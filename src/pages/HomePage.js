@@ -20,7 +20,7 @@ const HomePage = () => {
           pizzerias, personal trainers, grocery stores, or anything else.
         </p>
         <p className={style}>
-          You can also enter a city and take your search anywhere in the world.
+          You can also enter another city and take your search anywhere.
         </p>
       </div>
     </Container>

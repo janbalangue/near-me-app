@@ -29,7 +29,6 @@ const HomeSearchForm = () => {
           <Form>
             <FormGroup>
               <Col>
-                <Label htmlFor="search">Search</Label>
                 <Field
                   className="form-control"
                   id="search"

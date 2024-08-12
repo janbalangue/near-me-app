@@ -11,6 +11,7 @@ const HomePage = () => {
     <Container className="mt-5" fluid>
       <div>
         <h1 className={style}>Find your next favorite place.</h1>
+        <br />
       </div>
       <HomeSearchForm />
       <div id="textIntro">

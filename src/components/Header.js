@@ -14,7 +14,7 @@ const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
     <Navbar color="primary" dark sticky="top" expand="md">
-      <NavbarBrand className="ms-4 mt-1" href="/">
+      <NavbarBrand className="ms-4 mt-1">
         <Logo /> 
       </NavbarBrand>
       <NavbarToggler onClick={() => setMenuOpen(!menuOpen)} />

@@ -1,11 +1,12 @@
 import { Container, Input } from "reactstrap";
 import SearchRow from "../features/search/SearchRow";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { v4 as uuid } from "uuid";
 import { useParams } from "react-router-dom";
-import { callPlacesBackend } from "../data/callPlacesBackend";
+// import { callPlacesBackend } from "../data/callPlacesBackend";
 import NoResults from "../features/search/NoResults";
 import { useSpring, animated } from "react-spring";
+import { response } from "../data/response";
 
 const SearchPage = () => {
   const { query } = useParams();
@@ -16,29 +17,31 @@ const SearchPage = () => {
     config: { duration: 500 },
   });
   const [places, setPlaces] = useState([]);
-  const storedPlacesRef = useRef(null);
+  // const storedPlacesRef = useRef(null);
   const [filterText, setFilterText] = useState("");
   useEffect(() => {
-    document.title = `Near Me App | Search: ${query}`;
+    document.title = `Near Me App | Search | ${query}`;
+    setPlaces(response.places);
+    setToggle(true);
   }, [query]);
-  useEffect(() => {
-    const fetchPlaces = async () => {
-      try {
-        const response = await callPlacesBackend(query);
-        setPlaces(response);
-        storedPlacesRef.current = response;
-        setToggle(true);
-      } catch (error) {
-        console.error(error.message);
-      }
-    };
-    fetchPlaces();
-  }, [query]);
+  // useEffect(() => {
+  //   const fetchPlaces = async () => {
+  //     try {
+  //       const response = await callPlacesBackend(query);
+  //       setPlaces(response);
+  //       storedPlacesRef.current = response;
+  //       setToggle(true);
+  //     } catch (error) {
+  //       console.error(error.message);
+  //     }
+  //   };
+  //   fetchPlaces();
+  // }, [query]);
   const handleChange = (e) => {
     e.preventDefault();
     setFilterText(e.target.value);
     setPlaces(
-      storedPlacesRef.current.filter((place) => {
+      response.places.filter((place) => {
         const [name, address, priceLevel] = [
           place.displayName.text.toLowerCase(),
           place.formattedAddress.toLowerCase(),
@@ -54,6 +57,7 @@ const SearchPage = () => {
       })
     );
   };
+  console.log(places);
   return (
     <Container fluid>
       <Input

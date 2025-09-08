@@ -48,7 +48,7 @@ const SearchPage = () => {
       <Input
         id="filter"
         name="filter"
-        placeholder="Type here to filter"
+        placeholder="Search within results..."
         type="search"
         onChange={handleChange}
         autoFocus

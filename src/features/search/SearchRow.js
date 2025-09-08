@@ -13,7 +13,7 @@ const SearchRow = ({ place }) => {
           <CardText>
             {formattedAddress}
             <br />
-            {priceLevel ? priceLevel.split("_").join(" ").toLowerCase() : ""}
+            {priceLevel ? "Cost: " + priceLevel.split("_")[2].toLowerCase() : ""}
           </CardText>
           {websiteUri ? (
             <Link to={websiteUri}>

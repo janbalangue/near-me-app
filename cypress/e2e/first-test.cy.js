@@ -1,5 +1,5 @@
 describe('home page', () => {
-  it('passes', () => {
+  it('displays expected content', () => {
     cy.visit('https://janbalangue.github.io/near-me-app/');
     cy.get('.App').should('be.visible');
     cy.get('.appTitle').contains('Near Me App');

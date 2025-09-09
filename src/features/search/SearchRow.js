@@ -1,5 +1,5 @@
-import { Container, Card, CardTitle, CardBody, CardText } from "reactstrap";
-import { Link } from "react-router-dom";
+import { Container, Card, CardTitle, CardBody, CardText } from 'reactstrap';
+import { Link } from 'react-router-dom';
 
 const SearchRow = ({ place }) => {
   const { displayName, formattedAddress, priceLevel, websiteUri } = place;
@@ -13,7 +13,9 @@ const SearchRow = ({ place }) => {
           <CardText>
             {formattedAddress}
             <br />
-            {priceLevel ? "Cost: " + priceLevel.split("_")[2].toLowerCase() : ""}
+            {priceLevel
+              ? 'Cost: ' + priceLevel.split('_')[2].toLowerCase()
+              : ''}
           </CardText>
           {websiteUri ? (
             <Link to={websiteUri}>

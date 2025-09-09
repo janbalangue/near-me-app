@@ -1,5 +1,5 @@
-import { Container, Row, Col } from "reactstrap";
-import { Link } from "react-router-dom";
+import { Container, Row, Col } from 'reactstrap';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -7,13 +7,19 @@ const Footer = () => {
       <Container fluid className="">
         <Row>
           <Col id="footer-links">
-            <h5 style={{display: "inline"}} className="mr-5">Links:</h5>
-            <ul className="list-unstyled" style={{display: "inline"}}>
-              <li className="m-3" style={{display: "inline"}}>
-                <Link to="/" style={{textDecoration: "none"}}>Home</Link>
+            <h5 style={{ display: 'inline' }} className="mr-5">
+              Links:
+            </h5>
+            <ul className="list-unstyled" style={{ display: 'inline' }}>
+              <li className="m-3" style={{ display: 'inline' }}>
+                <Link to="/" style={{ textDecoration: 'none' }}>
+                  Home
+                </Link>
               </li>
-              <li style={{display: "inline"}}>
-                <Link to="/about" style={{textDecoration: "none"}}>About</Link>
+              <li style={{ display: 'inline' }}>
+                <Link to="/about" style={{ textDecoration: 'none' }}>
+                  About
+                </Link>
               </li>
             </ul>
           </Col>

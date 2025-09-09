@@ -1,19 +1,19 @@
-import { useEffect, useState } from "react";
-import { useSpring, animated } from "react-spring";
-import { Row } from "reactstrap";
-import kermits404 from "../app/assets/img/kermits-404.jpg";
-import { useLocation } from "react-router-dom";
+import { useEffect, useState } from 'react';
+import { useSpring, animated } from 'react-spring';
+import { Row } from 'reactstrap';
+import kermits404 from '../app/assets/img/kermits-404.jpg';
+import { useLocation } from 'react-router-dom';
 
 const PageNotFound = () => {
   const location = useLocation();
   const [toggle, setToggle] = useState(false);
   const animatedStyle = useSpring({
     opacity: toggle ? 1 : 0,
-    transform: toggle ? "scale(1, 1)" : "scale(1, 0)",
+    transform: toggle ? 'scale(1, 1)' : 'scale(1, 0)',
     config: { duration: 500 },
   });
   useEffect(() => {
-    document.title = "Near Me App | Page Not Found";
+    document.title = 'Near Me App | Page Not Found';
     setToggle(true);
   }, []);
   return (

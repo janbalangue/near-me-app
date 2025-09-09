@@ -1,11 +1,11 @@
-import { Container } from "reactstrap";
-import HomeSearchForm from "../features/home/HomeSearchForm";
-import { useEffect } from "react";
+import { Container } from 'reactstrap';
+import HomeSearchForm from '../features/home/HomeSearchForm';
+import { useEffect } from 'react';
 
 const HomePage = () => {
-  const style = "text-center";
+  const style = 'text-center';
   useEffect(() => {
-    document.title = "Near Me App | Home";
+    document.title = 'Near Me App | Home';
   }, []);
   return (
     <Container className="mt-5" fluid>

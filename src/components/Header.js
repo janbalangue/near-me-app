@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState } from 'react';
 import {
   Navbar,
   NavbarBrand,
@@ -6,16 +6,16 @@ import {
   NavItem,
   NavbarToggler,
   Collapse,
-} from "reactstrap";
-import { NavLink } from "react-router-dom";
-import Logo from "./Logo";
+} from 'reactstrap';
+import { NavLink } from 'react-router-dom';
+import Logo from './Logo';
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
     <Navbar color="primary" dark sticky="top" expand="md">
       <NavbarBrand className="ms-4 mt-1">
-        <Logo /> 
+        <Logo />
       </NavbarBrand>
       <NavbarToggler onClick={() => setMenuOpen(!menuOpen)} />
       <Collapse isOpen={menuOpen} navbar>

@@ -1,13 +1,13 @@
-import { Container, Col, FormGroup } from "reactstrap";
-import { useNavigate } from "react-router-dom";
-import { Formik, Form, Field, ErrorMessage } from "formik";
-import * as Yup from "yup";
+import { Container, Col, FormGroup } from 'reactstrap';
+import { useNavigate } from 'react-router-dom';
+import { Formik, Form, Field, ErrorMessage } from 'formik';
+import * as Yup from 'yup';
 
 const SearchSchema = Yup.object().shape({
   search: Yup.string()
-    .min(2, "Please enter at least 2 characters")
+    .min(2, 'Please enter at least 2 characters')
     .matches(/^[a-z ]+$/i, 'Only alphabetical characters are allowed')
-    .required("Required"),
+    .required('Required'),
 });
 
 const HomeSearchForm = () => {
@@ -18,9 +18,9 @@ const HomeSearchForm = () => {
   return (
     <Container id="searchContainer" fluid>
       <Formik
-        initialValues={{ search: "" }}
+        initialValues={{ search: '' }}
         validationSchema={SearchSchema}
-        onSubmit={( values, {setSubmitting}) => {
+        onSubmit={(values, { setSubmitting }) => {
           handleSubmit(values);
           setSubmitting(false);
         }}
@@ -45,7 +45,7 @@ const HomeSearchForm = () => {
               </Col>
             </FormGroup>
             <Container className="searchBtnContainer">
-              {" "}
+              {' '}
               <button
                 type="submit"
                 name="submit"

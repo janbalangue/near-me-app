@@ -1,22 +1,22 @@
-import { Container, Input } from "reactstrap";
-import SearchRow from "../features/search/SearchRow";
-import { useState, useEffect } from "react";
-import { v4 as uuid } from "uuid";
-import { useParams } from "react-router-dom";
-import NoResults from "../features/search/NoResults";
-import { useSpring, animated } from "react-spring";
-import { response } from "../data/response";
+import { Container, Input } from 'reactstrap';
+import SearchRow from '../features/search/SearchRow';
+import { useState, useEffect } from 'react';
+import { v4 as uuid } from 'uuid';
+import { useParams } from 'react-router-dom';
+import NoResults from '../features/search/NoResults';
+import { useSpring, animated } from 'react-spring';
+import { response } from '../data/response';
 
 const SearchPage = () => {
   const { query } = useParams();
   const [toggle, setToggle] = useState(false);
   const animatedStyle = useSpring({
     opacity: toggle ? 1 : 0,
-    transform: toggle ? "scale(1, 1)" : "scale(1, 0)",
+    transform: toggle ? 'scale(1, 1)' : 'scale(1, 0)',
     config: { duration: 500 },
   });
   const [places, setPlaces] = useState([]);
-  const [filterText, setFilterText] = useState("");
+  const [filterText, setFilterText] = useState('');
   useEffect(() => {
     document.title = `Near Me App | Search | ${query}`;
     setPlaces(response.places);
@@ -31,8 +31,8 @@ const SearchPage = () => {
           place.displayName.text.toLowerCase(),
           place.formattedAddress.toLowerCase(),
           place.priceLevel
-            ? place.priceLevel.split("_").join(" ").toLowerCase()
-            : "price level unavailable",
+            ? place.priceLevel.split('_').join(' ').toLowerCase()
+            : 'price level unavailable',
         ];
         return (
           name.includes(filterText.toLowerCase()) ||
@@ -54,14 +54,14 @@ const SearchPage = () => {
         autoFocus
       />
       {places[0] ? (
-        places.map((place) => { 
+        places.map((place) => {
           return (
             <animated.div key={uuid()} style={animatedStyle}>
               <SearchRow place={place} key={uuid()} />
             </animated.div>
           );
-        }
-      )) : (
+        })
+      ) : (
         <NoResults />
       )}
     </Container>

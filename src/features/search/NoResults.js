@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 
 const NoResults = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -10,7 +10,7 @@ const NoResults = () => {
   });
   return (
     <div>
-      {" "}
+      {' '}
       {isVisible && <h2 className="mt-5 text-center">No results found</h2>}
     </div>
   );

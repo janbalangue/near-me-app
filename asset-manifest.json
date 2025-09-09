@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/near-me-app/static/css/main.274131a9.css",
-    "main.js": "/near-me-app/static/js/main.6586e836.js",
+    "main.js": "/near-me-app/static/js/main.a53151ac.js",
     "static/media/fontawesome-webfont.svg?v=4.7.0": "/near-me-app/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
     "static/media/kermits-404.jpg": "/near-me-app/static/media/kermits-404.5af4aaced36edf95d830.jpg",
     "static/media/fontawesome-webfont.eot": "/near-me-app/static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
@@ -65,10 +65,10 @@
     "static/media/mapPin.svg": "/near-me-app/static/media/mapPin.e92846ceaa7b037026a365eb98dcff29.svg",
     "index.html": "/near-me-app/index.html",
     "main.274131a9.css.map": "/near-me-app/static/css/main.274131a9.css.map",
-    "main.6586e836.js.map": "/near-me-app/static/js/main.6586e836.js.map"
+    "main.a53151ac.js.map": "/near-me-app/static/js/main.a53151ac.js.map"
   },
   "entrypoints": [
     "static/css/main.274131a9.css",
-    "static/js/main.6586e836.js"
+    "static/js/main.a53151ac.js"
   ]
 }

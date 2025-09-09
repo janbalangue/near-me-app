@@ -19,6 +19,7 @@ const HomePage = () => {
           Search for any place under the sun in your neighborhood or around the
           world.
         </p>
+        <p className={style}>As long as it's coffee around Oceanside.</p>
       </div>
     </Container>
   );
